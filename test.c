@@ -262,7 +262,7 @@ int main()
 	test_memset();
 	test_memcpy();
 	test_strdup();
-	//test_cat();
+	test_cat();
 
 	// bonus
 	test_striter();
