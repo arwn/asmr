@@ -1,7 +1,7 @@
 ;;Author: Aren Windham
 ;;The ft_isalpha function returns 1 if c is between 'a' or 'z' including
 ;;'a' and 'z' or if c is between 'A' or 'Z' including 'A' and 'Z' where
-;;c between 0 and 255.
+;;c between 0 and 255. ft_isalpha returns zero otherwise
 
 ;;ft_isalpha(int c)
 global _ft_isalpha
