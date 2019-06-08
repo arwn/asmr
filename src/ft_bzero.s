@@ -1,12 +1,6 @@
 ;;Author: A.R.W
-
-;;Description
-;The bzero function writes n zeroed bytes to the string s. if n is
-;zero, bzero does nothing
-
-;;Register Usage:
-;rsi	| number of zeroes to write	| decremented to zero
-;rdi	| memory to write zeroes to	| points to end of memory
+;;The bzero function writes n zeroed bytes to the string s. if n is
+;;zero, bzero does nothing
 
 ;;void ft_bzero(void *s, size_t n);
 global _ft_bzero

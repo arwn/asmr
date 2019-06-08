@@ -1,12 +1,6 @@
 ;;Author: Aren Windham
-
-;;Description
-;The toupper function converts a lower-case letter to the coresponding
-;upper-case letter.
-
-;;Register Usage
-;rdi	may have 32 subtracted
-;rax	return value
+;;The toupper function converts a lower-case letter to the coresponding
+;;upper-case letter.
 
 ;;int toupper(int c)
 global _ft_toupper

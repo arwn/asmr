@@ -1,12 +1,6 @@
 ;;Author: Aren Windham
-
-;;Description
-;the tolower funcion converts an upper-case letter to the coresponding
-;lower-case letter.
-
-;;Register Usage
-;rdi	may be incremented by 32
-;rax	return value
+;;the tolower funcion converts an upper-case letter to the coresponding
+;;lower-case letter.
 
 ;;int ft_tolower(int c)
 global _ft_tolower
