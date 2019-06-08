@@ -28,6 +28,5 @@ copy:
     mov rdi, rax
     mov rsi, [rsp]
     call _ft_strcat
-    pop r8
-    pop r8
+	leave
     ret
