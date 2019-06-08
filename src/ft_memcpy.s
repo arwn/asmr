@@ -13,5 +13,5 @@ _ft_memcpy:
     dec     rdx                        ;n--
     jmp     _ft_memcpy
 done:
-    mov     rax, rdi
+    mov     rax, rdi                   ;return dst
     ret
