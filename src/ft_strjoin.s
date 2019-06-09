@@ -13,9 +13,7 @@ extern _ft_bzero
 section .text
 _ft_strjoin:
 	;align stack since we use _malloc
-	push	rbp
-	mov		rbp, rsp
-	sub		rsp, 16
+    enter 0,0
 
     push    rdi             ;s1
     push    rsi             ;s2
