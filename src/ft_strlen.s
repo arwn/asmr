@@ -9,7 +9,7 @@ _ft_strlen:
     mov rax, 0      ;compare byte for rep
     mov rcx, -1     ;counter
 
-    cld
+    cld             ;for safety
     repnz scasb     ;go to end of string
 
     mov rax, rcx
