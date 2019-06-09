@@ -12,6 +12,11 @@ extern _ft_bzero
 
 section .text
 _ft_strjoin:
+	;align stack since we use _malloc
+	push	rbp
+	mov		rbp, rsp
+	sub		rsp, 16
+
     push    rdi             ;s1
     push    rsi             ;s2
 lengths:
@@ -25,17 +30,16 @@ lengths:
     add     r8, 1
     mov     rdi, r8
 copy:
+    push    rdi
     call    _malloc         ;malloc new space
-    mov     rsi, rdi
+    pop     rsi
     mov     rdi, rax
     call    _ft_bzero       ;bzero maloced space
-    mov     rsi, [rsp + 8]
+    mov     rsi, [rsp+8]
     call    _ft_strcat
     mov     rdi, rax
-    mov     rsi, [rsp]
+    pop     rsi
     call    _ft_strcat
 	leave
     ret
 
-;;bugs
-;malloc not called correctly
