@@ -246,6 +246,12 @@ void test_atoi()
     assert(ft_atoi("-1") == atoi("-1"));
     assert(ft_atoi("12") == atoi("12"));
     assert(ft_atoi("-12") == atoi("-12"));
+    assert(ft_atoi("112") == atoi("112"));
+    assert(ft_atoi("-112") == atoi("-112"));
+    assert(ft_atoi("1112") == atoi("1112"));
+    assert(ft_atoi("-1112") == atoi("-1112"));
+    assert(ft_atoi("2147483647") == atoi("2147483647"));
+    assert(ft_atoi("-2147483648") == atoi("-2147483648"));
     ft_puts("atoi passed");
 }
 
