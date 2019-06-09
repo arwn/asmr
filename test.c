@@ -5,6 +5,7 @@
 #include <string.h>
 #include <assert.h>
 #include <limits.h>
+#include <fcntl.h>
 
 void test_isdigit()
 {
@@ -181,8 +182,11 @@ void test_strdup()
 
 void test_cat()
 {
-    ft_puts("Enter text to be catted:");
-    ft_cat(0);
+    int fd = open("author", O_RDONLY);
+    ft_cat(-14389);
+    ft_cat(fd);
+    close(fd);
+    puts("cat passed");
 }
 
 void test_striter_func(char *c)
@@ -271,7 +275,7 @@ int main()
     test_memset();
     test_memcpy();
     test_strdup();
-    //test_cat();
+    test_cat();
 
     // bonus
     test_striter();
