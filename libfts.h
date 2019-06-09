@@ -26,5 +26,6 @@ char *ft_strjoin(char *s1, char *s2);
 void ft_striter(char *s, void (*f)(char *));
 int ft_fact(int n);
 int ft_fib(int n);
+int ft_atoi(char *str);
 
 #endif

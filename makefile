@@ -22,6 +22,7 @@ obj/%.o: %.s
 
 clean:
 	@rm -rf obj/*
+	@rm -f a.out
 
 fclean: clean
 	@rm -f $(NAME)

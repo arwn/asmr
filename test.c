@@ -211,13 +211,6 @@ void test_abs()
     ft_puts("abs passed");
 }
 
-void test_strjoin()
-{
-    char *s = ft_strjoin("hello", " world");
-    assert(strncmp(s, "hello world", 12) == 0);
-    ft_puts("strjoin passed");
-}
-
 void test_fact()
 {
     assert(1 == ft_fact(1));
@@ -246,6 +239,16 @@ void test_fib()
     ft_puts("fib passed");
 }
 
+void test_atoi()
+{
+    assert(ft_atoi("0") == atoi("0"));
+    assert(ft_atoi("1") == atoi("1"));
+    assert(ft_atoi("-1") == atoi("-1"));
+    assert(ft_atoi("12") == atoi("12"));
+    assert(ft_atoi("-12") == atoi("-12"));
+    ft_puts("atoi passed");
+}
+
 int main()
 {
     test_bzero();
@@ -267,9 +270,9 @@ int main()
     // bonus
     test_striter();
     test_abs();
-    test_strjoin();
     test_fact();
     test_fib();
+    test_atoi();
 
-    return (0);
+    return 0;
 }
