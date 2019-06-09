@@ -6,13 +6,10 @@ global _ft_memset
 
 section .text
 _ft_memset:
-    cmp     rdx, 0                  ;if len <= 0 then done
-    jle     done
-memset:                             ;while len > 0
-    dec     rdx                     ;len--
-    mov     byte [rdi + rdx], sil   ;b+len = c
-    cmp     rdx, 0                  ;if c <= 1
-    jg      memset                  ;then done
-done:
-    mov     rax, rdi
+    push    rdi         ;return value
+    mov     rax, rsi    ;char to set
+    mov     rcx, rdx    ;len
+    cld
+    rep     stosb
+    pop     rax         ;return value
     ret
