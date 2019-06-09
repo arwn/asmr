@@ -10,10 +10,7 @@ extern _ft_strlen
 
 section .text
 _ft_strdup:
-	;align stack since we use _malloc
-	push	rbp
-	mov		rbp, rsp
-	sub		rsp, 16
+    enter 0, 0          ;align stack since we use _malloc
 
 	push	rdi         ;save *s from clobbering
 	call	_ft_strlen
