@@ -6,8 +6,8 @@ global _ft_cat
 section .data
 	buf		times 64 db 0 		;buffer to read into
 	bufsz	equ $ - buf
-    badfd   db 'invalid fd' ,10
-    bbufsz	equ $ - badfd
+    badbuf  db 'invalid fd' ,10
+    bbufsz	equ $ - badbuf
 
 section .text
 _ft_cat:
@@ -34,7 +34,7 @@ done:
 
 invalid_fd:
     mov     rdi, 1              ;stdout
-    mov     rsi, badfd
+    mov     rsi, badbuf
     mov     rdx, bbufsz
     mov     rax, 0x2000004      ;write syscall
     syscall
